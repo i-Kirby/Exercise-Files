@@ -25,8 +25,10 @@ namespace ExploreCalifornia.Controllers
 
         [HttpPost]
         public List<Tour> SearchTours([FromBody]TourSearchRequestDto request)
+        //public IHttpActionResult SearchTours([FromBody]TourSearchRequestDto request)
         {
             if (request.MinPrice > request.MaxPrice)
+                //return BadRequest("MinPrice must be less than MaxPrice");
                 throw new HttpResponseException(new HttpResponseMessage
                 {
                     StatusCode = HttpStatusCode.BadRequest,
@@ -39,6 +41,7 @@ namespace ExploreCalifornia.Controllers
                                      && i.Price >= request.MinPrice);
 
             return query.ToList();
+            //return Ok(query.ToList());
         }
         
         [HttpPut]
