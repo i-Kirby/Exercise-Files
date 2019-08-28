@@ -15,7 +15,7 @@ using ExploreCalifornia.DataAccess.Models;
 
 namespace ExploreCalifornia.Controllers
 {
-    public class ReservationController : ApiController
+    public class ReservationController : ApiController //created WebApi2.0 with actions Entity Framework, use acsync controller
     {
         private AppDataContext db = new AppDataContext();
 

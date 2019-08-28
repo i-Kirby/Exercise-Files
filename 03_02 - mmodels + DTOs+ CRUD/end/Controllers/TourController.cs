@@ -18,7 +18,7 @@ namespace ExploreCalifornia.Controllers
         public List<TourDto> GetAllTours ([FromUri]bool freeOnly = false)
         {
             var query = _context.Tours
-                .Select(i => new TourDto
+                .Select(i => new TourDto //mapping from Tour to TourDto
                 {
                     Name =  i.Name,
                     Description = i.Description,
