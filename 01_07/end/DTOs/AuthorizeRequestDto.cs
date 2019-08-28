@@ -11,5 +11,15 @@ namespace ExploreCalifornia.DTOs
         [Required]
         [MinLength(32), MaxLength(32)]
         public string AppSecret { get; set; }
+
+        //[Compare()] [CreditCard()] [Email()] [DataType()] [Range()] [RegularExpression()] [ValidationAttribute()]
+       /* [AttributeUsage(AtributeTargets.Property | SttributyTargets.Field, AllowMultiple = false)]
+        sealed public class CustomAttribute : ValidationAttribute
+        {
+            public override bool IsValid(object value)
+            {
+                return true;
+            }
+        }*/
     }
 }
